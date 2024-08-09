@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  dedicated-game-server:
+    image: joejoe29sa/dedicated-game-server:1.0.1
+    container_name: ams2-server-dedicated
+    environment:
+#      - USERNAME=
+#      - PASSWORD=<steam-password>
+#      - GUARDCODE=<steam-guard-code>
+      - APPID=1338040
+      - RUNCMD=/usr/bin/wine DedicatedServerCmd.exe
+      - HEADLESS=yes
+      - RDP_SERVER=no
+      - RDP_PASSWD=games
+    tty: true
+    stdin_open: true
+    network_mode: host
