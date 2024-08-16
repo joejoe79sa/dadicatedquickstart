@@ -19,7 +19,8 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 # Install Docker Compose
-sudo apt install -y docker-compose
+#sudo apt install -y docker-compose
+sudo apt-get install docker-compose-plugin
 
 # Optional: Start Docker if not already started
 sudo systemctl start docker
@@ -29,4 +30,4 @@ sudo systemctl enable docker
 
 # Verify Docker installation
 sudo docker --version
-sudo docker-compose --version
+sudo docker compose version
